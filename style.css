@@ -33,6 +33,7 @@ h3{
 
 .hero__wrapper--left{
     align-items: left;
+    width: 60%;
 }
 
 .hero__wrapper--right {
@@ -135,6 +136,8 @@ button{
 
     }
     .hero__wrapper--left{
+        position: absolute;
+        top: 20px;
         margin-left: 0px;
     }
 
