@@ -2,45 +2,63 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #eeedf0;
 }
 
-.container {
+.hero__wrapper{
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    min-height: 500px;
+    align-items: center;
 }
 
-header {
-    background-color: rgb(182, 155, 3);
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
+.hero__wrapper p {
+    color: gray;
 }
 
-.header{
-    max-height: 300px;
+.hero__wrapper h1{
+    color: #4e4e4e;
+    font-size: 60px;
+    margin: 0px;
+}
+
+h3{
+    color: #4e4e4e;
+}
+
+.hero__wrapper h4{
+    color: #bc5374;
+}
+
+
+.hero__wrapper--left{
+    align-items: left;
+}
+
+.hero__wrapper--right {
+    position: absolute;
+    left: 55%;
+    top: 0px;
     display: flex;
-    flex-direction: row-reverse;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 5px 0;
+.hero__wrapper--right img{
+    height: 500px;
 }
 
 .portfolio {
-    background-color: #fff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 50px 100px;
+}
+
+.Portfolio-continer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+
 }
 
 .project {
@@ -57,22 +75,27 @@ header p {
 }
 
 .about {
-    background-color: rgb(182, 155, 3);
-    padding: 40px 0;
-    
+    background-color: #bc5374;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about-container{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
     padding: 20px;
+}
+.about-container p{
+    width: 40%;
 }
 
 .contact {
+    background-color: #ffffff;
     padding: 40px 0;
 }
 
@@ -86,32 +109,112 @@ header p {
 }
 
 footer {
-    background-color: rgb(182, 155, 3);
-    color: #fff;
+    color: #bc5374;
     text-align: center;
     padding: 10px 0;
 }
 
 button{
-    background-color: #f4f4f4;
+    background-color: #bc5374;
     border: none;
-    color: black;
-    margin-top: 20px;
+    color: #ffffff;
     padding: 10px;
+    margin-top: 15px;
     border-radius: 10px;
+    width: 100px;
 }
 
-@media screen and (max-width: 945px) {
-    .arrow{
-        display: none;
+
+@media only screen and (max-width: 1224px) {
+
+    .hero__wrapper{
+        min-height: 750px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+    }
+    .hero__wrapper--left{
+        margin-left: 0px;
+    }
+
+    .hero__wrapper--right{
+        top: 250px;
+        left: 25%;
+    }
+}
+@media only screen and (max-width: 950px) {
+
+    .Portfolio-continer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        gap: 50px;
     }
 }
 
-@media screen and (max-width: 760px) {
-    .header{
-        max-height: 900px;
-        display: flex;
-        flex-direction: column;
+@media only screen and (max-width: 768px) {
+
+    .Portfolio-continer{
+        gap: 20px;
     }
     
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    .about-container p{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+
+    .Portfolio-continer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero__wrapper{
+        min-height: 470px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .hero__wrapper--left{
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    .hero__wrapper--left h1{
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    .hero__wrapper--left h4{
+        margin: 5px;
+    } 
+    .hero__wrapper--left p{
+        margin: 5px;
+    } 
+
+    .hero__wrapper--right{
+        top: 200px;
+        left: 25%;
+    }
+    .hero__wrapper--right img{
+        height: 270px;
+    }
+}
+@media only screen and (max-width: 420px) {
+
+    .hero__wrapper--right{
+        left: 20%;
+    }
 }
